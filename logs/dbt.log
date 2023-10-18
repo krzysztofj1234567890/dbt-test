@@ -374,3 +374,33 @@ Runtime Error
 [0m20:23:48.362339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAC3A86D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAC6738460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAC6738580>]}
 [0m20:23:48.363339 [debug] [MainThread]: Flushing usage events
 [0m20:23:48.584232 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m19:39:38.852013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff202c6ddb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2011a6260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2011a6200>]}
+
+
+============================== 19:39:38.857310 | c24d6041-b900-4245-ba36-e1544f577441 ==============================
+[0m19:39:38.857310 [info ] [MainThread]: Running with dbt=1.6.6
+[0m19:39:38.857939 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/kj/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init dbt_test_snow', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:39:38.858488 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/home/kj/.dbt')}
+[0m19:39:38.859099 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m19:39:38.860185 [debug] [MainThread]: Starter project path: /home/kj/.local/lib/python3.10/site-packages/dbt/include/starter_project
+[0m19:39:38.863355 [info ] [MainThread]: 
+Your new dbt project "dbt_test_snow" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:39:38.864054 [info ] [MainThread]: Setting up your profile.
+[0m19:54:11.046642 [info ] [MainThread]: Profile dbt_test_snow written to /home/kj/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:54:11.048464 [debug] [MainThread]: Command `dbt init` succeeded at 19:54:11.048187 after 872.20 seconds
+[0m19:54:11.049403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff202c6ddb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff20529bc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff20228c430>]}
+[0m19:54:11.050617 [debug] [MainThread]: Flushing usage events

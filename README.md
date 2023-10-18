@@ -65,12 +65,14 @@ New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
 ```
 pip install dbt-core
 pip install dbt-postgres
+pip install dbt-snowflake
 ```
 
 ### initialize
 
 ```
-dbt init dbt_test
+dbt init dbt_test   # postgresql
+dbt init dbt_test_snow  # snowflake
 ```
 
 ### connect to database
@@ -120,7 +122,58 @@ dbt run
 ## connect to snowflake
 
 ### login to snowflake
+https://cifynsh-gya10556.snowflakecomputing.com/console/login. 
 
+```
+username:   krzysztofj
+password:   
+```
+
+Switch role to: ACCOUNTADMIN
+
+Warehouse:  TRANSFORM_WH  size: x-small
+
+User: transform_user
+Password: Password123
+Role:   TRANSFORM_ROLE
+Database:   ANALYTICS
+Schema:     dbt
+
+### created profile
+
+/home/kj/.dbt/profiles.yml 
+
+```
+dbt_test_snow:
+  outputs:
+    dev:
+      account: cifynsh-gya10556
+      database: ANALYTICS
+      password: Password123
+      role: TRANSFORM_ROLE
+      schema: dbt
+      threads: 1
+      type: snowflake
+      user: transform_user
+      warehouse: TRANSFORM_WH
+      client_session_keep_alive: False
+  target: dev
+```
+
+### test snowflake-dbt config
+
+test
+
+```
+cd dbt_test_snow
+dbt debug
+```
+
+run
+
+```
+dbt run
+```
 ### create database: Data -> Databases
 
 
