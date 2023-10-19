@@ -122,7 +122,7 @@ dbt run
 ## connect to snowflake
 
 ### login to snowflake
-https://cifynsh-gya10556.snowflakecomputing.com/console/login. 
+https://cifynsh-gya10556.snowflakecomputing.com/console/login
 
 ```
 username:   krzysztofj
