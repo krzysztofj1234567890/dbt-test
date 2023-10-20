@@ -17,6 +17,7 @@ with source_data as (
 
 )
 
+SELECT * FROM source_data
 /*
 
 select *, {{ var('my_first_variable') }} as first_variable
