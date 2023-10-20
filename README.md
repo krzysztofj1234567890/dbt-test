@@ -174,7 +174,12 @@ run
 ```
 dbt run
 ```
-### create database: Data -> Databases
 
+
+test
+
+```
+dbt test
+```
 
 

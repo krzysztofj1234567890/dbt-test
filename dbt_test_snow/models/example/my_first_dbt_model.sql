@@ -17,14 +17,14 @@ with source_data as (
 
 )
 
-SELECT * FROM source_data
-/*
 
-select *, {{ var('my_first_variable') }} as first_variable
-from source_data
-where id >= {{ var('my_third_variable') }}
+-- SELECT * FROM source_data
 
-*/
+
+SELECT *, {{ var('my_first_variable') }} as first_variable
+FROM source_data
+WHERE id >= {{ var('my_third_variable') }}
+
 
 /*
     Uncomment the line below to remove records with null `id` values
