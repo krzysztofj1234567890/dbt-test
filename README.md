@@ -2,7 +2,17 @@
 
 ## use postgresql
 
-### run postgras container
+### run postgres container
+
+```	
+docker run --name postgres -p 5432:5432 \
+-e POSTGRES_USER=postgres \
+-e POSTGRES_PASSWORD=postpass \
+-e POSTGRES_HOST_AUTH_METHOD=trust \
+-d  postgres
+```
+
+Or if you run using docker desktop:
 
 ```
 port			5432
@@ -16,6 +26,15 @@ POSTGRES_HOST_AUTH_METHOD trust
 https://hub.docker.com/r/dpage/pgadmin4/
 
 ```
+docker run --name pgadmin -p 1234:80 \
+    -e 'PGADMIN_DEFAULT_EMAIL=test@test.com' \
+    -e 'PGADMIN_DEFAULT_PASSWORD=postpass' \
+    -d dpage/pgadmin4
+```
+
+Or if you run using docker desktop:
+
+```
 Name: 		pgadmin
 HOST PORT: 	1234:80
 PGADMIN_DEFAULT_EMAIL: test@test.com
@@ -25,6 +44,7 @@ PGADMIN_DEFAULT_PASSWORD: postpass
 ### connect containers
 
 ```
+docker ps     // to see running docker containers
 docker network ls
 docker network create --driver bridge pgnetwork
 docker network connect pgnetwork pgadmin
